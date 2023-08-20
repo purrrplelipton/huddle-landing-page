@@ -1,0 +1,148 @@
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --soft-magenta: hsl(300, 69%, 71%);
+  color: hsl(0, 0%, 98%);
+  background-color: var(--violet);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 320px;
+  max-width: 1280px;
+  margin: auto;
+  background: url(./assets/bg-mobile.svg) no-repeat fixed;
+  background-size: contain;
+}
+
+header,
+.logo,
+footer {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+header {
+  justify-content: flex-start;
+  padding: 1.5em;
+}
+
+.logo {
+  max-width: 188px;
+  /* justify-content: center; */
+}
+
+main {
+  padding: 2.375em 2em;
+}
+
+section {
+  text-align: center;
+  margin: 3em 0 0;
+}
+
+.title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+.desc {
+  font-size: 1.0375em;
+  margin-block: 1.125em;
+}
+
+.reg-link {
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8em;
+  padding: 1.12em 5.625em;
+  margin: 0.625em auto;
+  color: var(--violet);
+  background-color: hsl(0, 0%, 98%);
+  border-radius: 2em;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  transition: color 0.125s, background-color 0.125s;
+  transition-timing-function: ease-in-out;
+}
+
+.reg-link:active {
+  color: inherit;
+  background-color: var(--soft-magenta);
+}
+
+footer {
+  justify-content: center;
+  gap: 0.8em;
+}
+
+footer a {
+  font-size: 1.125em;
+  color: inherit;
+  padding: 0.375em;
+  border-radius: 50%;
+  border: 1px solid currentColor;
+  transition: color 0.125s ease-in-out;
+}
+
+footer a:active {
+  color: var(--soft-magenta);
+}
+
+footer a svg {
+  fill: currentColor;
+  aspect-ratio: 1 / 1;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    background-image: url(./assets/bg-desktop.svg);
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding: 3.5em 0;
+  }
+
+  .logo {
+    max-width: 272px;
+  }
+
+  main {
+    padding: 1.875em 0;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  section {
+    max-width: 576px;
+    text-align: left;
+    margin: 3em 0;
+    padding-left: 64px;
+  }
+
+  .title {
+    font-size: 2.5em;
+  }
+
+  .desc {
+    font-size: 1.125em;
+  }
+
+  .reg-link {
+    font-size: 1em;
+    padding: 0.875em 4em;
+  }
+
+  footer {
+    justify-content: flex-end;
+  }
+
+  footer a {
+    font-size: 1.125em;
+  }
+}
